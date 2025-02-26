@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}   
+\usepackage[english, russian]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with`a4paper' for UK/EU standard size
+\usepackage[a4paper,top=2cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+% \usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
+\usepackage{hyperref}
+\usepackage{seqsplit}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{algorithmicx}
+\usepackage{mathalfa}
+\usepackage{mathrsfs}
+\usepackage{dsfont}
+\usepackage{caption,subcaption}
+\usepackage{wrapfig}
+\usepackage[stable]{footmisc}
+\usepackage{indentfirst}
+\usepackage{rotating}
+\usepackage{pdflscape}
+\usepackage{tikz}
+
+\usepackage{MnSymbol,wasysym}
+\usepackage{minted}
+
+\begin{document}
+
+\begin{center}
+\Large {Задание 12. Минимальные остовные деревья. Динамическое программирование.}
+\end{center}
+
+\bigskip
+
+\textbf{1[1]} Постройте алгоритм, который находит максимальное остовное дерево графа, то есть
+остовное дерево максимального веса.
+
+\medskip
+
+\textbf{2[1]} Верно ли, что дерево кратчайших путей, которое строит алгоритм Дейкстры, является минимальным
+остовным деревом?
+
+\medskip
+
+\textbf{3[3]} На вход задачи подаётся неориентированный взвешенный граф $G(V, E)$ и подмножество вершин $U \subseteq V$. Необходимо построить остовное дерево, минимальное (по весу) среди деревьев, в которых все вершины $U$ являются листьями (но могут быть и другие листья) или обнаружить, что таких остовных деревьев нет. Постройте алгоритм, который решает задачу за $O(|E| \log |V |)$. Обратите внимание, что искомое дерево может не быть минимальным остовным деревом.
+
+\medskip
+
+\textbf{4[2 + 3]} Рассмотрим следующую игру. На доске нарисовано $n$ палочек. Два игрока по очереди зачёркивают от одной до трёх палочек. Проигрывает тот, кто зачеркнул последнюю палочку.
+
+\begin{enumerate}
+    \item Кто выигрывает при $n = 20$? (Считая, что соперник не ошибается.)
+    \item Кто выигрывает при произвольном $n$?
+\end{enumerate}
+
+\textbf{5[3]} Два игрока играют в следующую игру. На поле из $(N + 1) \times (N + 1)$ клеток (нумерация от $0$ до $N$) в клетке $(0, 0)$ стоит фишка. Её разрешено разрешено двигать из клетки с координатами $(x, y)$ в клетку с координатами $(x + a_i, y + b_i)$, где пары неотрицательных целых чисел $(a_i, b_i)$ обговорены перед началом игры; при этом $a_i$ и $b_i$ не равны нулю одновременно. Выигрывает тот игрок, который первым вывел фишку в клетку, которая находится на расстоянии не менее чем $R$ от $(0, 0)$. Необходимо определить, кто из игроков выигрывает при безошибочных действиях соперника. Игроки ходят по очереди, пропускать ход нельзя.
+
+\begin{enumerate}
+    \item Определите, кто из игроков имеет выигрышную стратегию при безошибочной игре соперника,
+если N = 5, R = 5, а список допустимых ходов: (1, 2), (2, 1), (1, 1).
+    \item Постройте алгоритм, который определяет победителя и его выигрышную стратегию в общем
+случае и оцените его сложность.
+\end{enumerate}
+
+\end{document}

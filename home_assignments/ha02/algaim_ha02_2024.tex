@@ -1,0 +1,78 @@
+\documentclass{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}   
+\usepackage[english, russian]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with`a4paper' for UK/EU standard size
+\usepackage[a4paper,top=2cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+% \usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
+\usepackage{hyperref}
+\usepackage{seqsplit}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{algorithmicx}
+\usepackage{mathalfa}
+\usepackage{mathrsfs}
+\usepackage{dsfont}
+\usepackage{caption,subcaption}
+\usepackage{wrapfig}
+\usepackage[stable]{footmisc}
+\usepackage{indentfirst}
+\usepackage{rotating}
+\usepackage{pdflscape}
+
+\usepackage{MnSymbol,wasysym}
+\usepackage{minted}
+
+\begin{document}
+
+\begin{center}
+\Large {Задание 2. Cложности, быстрое возведение, Фибоначчи.}
+\end{center}
+
+\bigskip
+
+\textbf{1} Найдите $7^{13} \mod 167$ с помощью быстрого возведения в степень. Нужно привести последовательность умножений и промежуточные результаты.
+
+\medskip
+
+\textbf{2} Злодей Анти-человек придумал последовательность чисел Анти-начи. Она продолжает последовательность чисел Фибоначчи влево. Например, поскольку $F_0 = 0$, $F_1 = 1$ и $F_{k+2} = F_{k+1} + F_k$, выполняется равенство $1 = 0 + F_{-1}$, из чего следует, что $F_{-1} = 1$. Дальнейшие числа Анти-начи определяются аналогично.
+
+Анти-человек умеет быстро возводить матрицы в степень. Подскажите, как ему находить $F_k$ для отрицательных $k$.
+
+\medskip
+
+\textbf{3} На вход поступает $n$ котов целочисленной массы от $2$ до $k$ килограммов.
+Для каждого кота известна масса и кличка.
+Известно, что сначала накормить требуется наиболее худосочных.
+Предложите алгоритм, выводящий порядок, в котором нужно кормить котов, докажите его корректность и оцените асимптотику.
+
+\medskip
+
+\textbf{4} Найдите $\Theta$-асимптотику функции $f(n) = \sum^n_{k=0} {n \choose k}$
+
+\medskip
+
+\textbf{5} Оцените асимптотически, сколько раз будет напечатана строка ''heh'' при вызове функции $\text{f}$.
+
+\begin{minted}{python}
+    def f(n):
+        for i = 1; i < n; i *= 2:
+            for j in range(i*i*i):
+                print("heh")
+
+        for i = 1; i < n; i += 2:
+            for j in range(i*i):
+                print("heh")
+\end{minted}
+
+\end{document}

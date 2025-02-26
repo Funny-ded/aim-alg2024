@@ -1,0 +1,89 @@
+\documentclass{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}   
+\usepackage[english, russian]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with`a4paper' for UK/EU standard size
+\usepackage[a4paper,top=2cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+% \usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
+\usepackage{hyperref}
+\usepackage{seqsplit}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{algorithmicx}
+\usepackage{mathalfa}
+\usepackage{mathrsfs}
+\usepackage{dsfont}
+\usepackage{caption,subcaption}
+\usepackage{wrapfig}
+\usepackage[stable]{footmisc}
+\usepackage{indentfirst}
+\usepackage{rotating}
+\usepackage{pdflscape}
+\usepackage{tikz}
+
+\usepackage{MnSymbol,wasysym}
+\usepackage{minted}
+
+\begin{document}
+
+\begin{center}
+\Large {Задание 11. Кратчайшие пути. Разные задачи.}
+\end{center}
+
+\bigskip
+
+\textit{Для доказательства корректности алгоритма нужно предоставить набор утверждений, логически следующих из условия задачи и описания алгоритма и из которых в свою очередь следует, что на всех возможных входах алгоритм даёт верный ответ.}
+
+\medskip
+
+\textbf{1[2]} Все степени вершин в неориентированном графе равны $2k$. Все его ребра покрашены в несколько цветов. Предложите $O(V + E)$ алгоритм, находящий в этом графе эйлеров цикл, в котором цвета всех соседних ребер различны, либо выводящий, что такого цикла нет.
+
+\medskip
+
+\textbf{2[5]} Веса ребер графа лежат в интервале $0, 1, \dots, W$, где $W$ - константа. Предложите алгоритм поиска кратчайших путей от одной вершины до всех остальных с временем работы $O(W|V| + |E|)$.
+
+\medskip
+
+\textbf{3[2+3+3]} Рассмотрим следующую модификацию алгоритма Дейкстры. При инициализации в очереди с приоритетами находится лишь вершина $s$. Вершина $v$ добавляется в очередь с приоритетами, если в результате релаксации $Relax(u, v)$ расстояние до вершины $v$ изменилось, и при этом $v$ не была в этот момент в очереди. Остальные шаги алгоритма остаются без изменений.
+
+\begin{enumerate}
+    \item Докажите корректность модифицированного алгоритма
+    \item Докажите, что модифицированный алгоритм работает корректно даже при наличии рёбер отрицательного веса, но при отсутсвии циклов отрицательного веса. Оцените время работы алгоритма на графах такого вида и сравните его со временем работы алгоритма Беллмана-Форда
+    \item Модифицируйте алгоритм так, чтобы он выдавал ошибку на графах с циклами отрицательного веса
+\end{enumerate}
+
+%\medskip
+
+%\textbf{4[3]} 
+
+%\medskip
+
+%\textbf{5[2]} 
+
+%\medskip
+
+%\textbf{5[1 + 5]} 
+
+%\medskip
+
+%\textbf{6[2]} 
+
+%\medskip
+
+%\textbf{7[3]} 
+
+%\medskip
+
+%\textbf{8[2]} 
+
+\end{document}

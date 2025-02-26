@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}   
+\usepackage[english, russian]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with`a4paper' for UK/EU standard size
+\usepackage[a4paper,top=2cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+% \usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
+\usepackage{hyperref}
+\usepackage{seqsplit}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{algorithmicx}
+\usepackage{mathalfa}
+\usepackage{mathrsfs}
+\usepackage{dsfont}
+\usepackage{caption,subcaption}
+\usepackage{wrapfig}
+\usepackage[stable]{footmisc}
+\usepackage{indentfirst}
+\usepackage{rotating}
+\usepackage{pdflscape}
+
+\usepackage{MnSymbol,wasysym}
+\usepackage{minted}
+
+\begin{document}
+
+\begin{center}
+\Large {Задание 4. Сортировки, порядковые статистики.}
+\end{center}
+
+\bigskip
+
+\textbf{Указание:} в этом задании мы будем использовать алгоритм поиска $k$-й порядковой статистики в качестве черного ящика, принимающего массив и число $k$, и за линейное время находящего элемент, который будет стоять на $k$-м месте в отсортированном массиве.
+
+\medskip
+
+\textbf{Рекомендация:} докажите корректность и оцените асимптотику для каждой задачи.
+
+\medskip
+
+\textbf{1} На вход задачи поступают три отсортированных массива. Постройте алгоритм, находящий число уникальных элементов в объединении этих массивов.
+
+\medskip
+
+\textbf{2} На вход задачи поступает массив $a$ из $n$ чисел. Постройте алгоритм, находящий число инверсий в массиве, то есть таких пар индексов $i, j$, что $i < j$ и $a[i] > a[j]$.
+
+\textbf{Рекомендация:} модифицируйте алгоритм сортировки слиянием.
+
+\medskip
+
+\textbf{3} На прямой задано $n$ строго вложенных отрезков в виде пар концов $(l_i, r_i)$. Они могут поступать на вход в произвольном порядке. Постройте алгоритм, находящий \textbf{множество точек на прямой}, покрытое ровно $\lceil \frac{2n}{3} \rceil$ отрезками.
+
+\medskip
+
+\textbf{4} На вход поступает число $n$ и массив $a$ размера $2n + 1$. Постройте алгоритм, находящий число $s$, минимизирующее сумму $\sum\limits_{i=1}^{2n+1} |a_i - s|$
+
+\end{document}

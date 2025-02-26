@@ -1,0 +1,82 @@
+\documentclass{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}   
+\usepackage[english, russian]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with`a4paper' for UK/EU standard size
+\usepackage[a4paper,top=2cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+% \usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
+\usepackage{hyperref}
+\usepackage{seqsplit}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{algorithmicx}
+\usepackage{mathalfa}
+\usepackage{mathrsfs}
+\usepackage{dsfont}
+\usepackage{caption,subcaption}
+\usepackage{wrapfig}
+\usepackage[stable]{footmisc}
+\usepackage{indentfirst}
+\usepackage{rotating}
+\usepackage{pdflscape}
+
+\usepackage{MnSymbol,wasysym}
+\usepackage{minted}
+
+\begin{document}
+
+\begin{center}
+\Large {Задание 5. Статистики, битовые операции, нижние оценки.}
+\end{center}
+
+\bigskip
+
+\textbf{1} На вход подается массив $a_1, \cdots, a_n$, в котором один из элементов встречается не меньше $\lceil \frac{n}{2} \rceil$ раз. Постройте алгоритм, находящий этот элемент.
+
+\medskip
+
+\textbf{2} С какой асимптотикой будеет работать алгоритм поиска $k$-й порядковой статистики, если делить массив на группы не по пять элементов, а по три? По семь?
+
+\medskip
+
+\textbf{3} На доске написан набор положительных целых чисел. За один ход можно взять любые два числа и вычесть из большего меньшее. Процесс останавливается, когда все числа становятся одинаковыми. Докажите, что этот процесс всегда остановится. Какие числа останутся в результате?
+
+\medskip
+
+\textbf{4} Оцените сложность алгоритма Divide, приведенного на странице 19 книги Дасгупты.
+
+\medskip
+
+\textbf{5} Предложите алгоритм возведения $n$-битовых чисел в степень по модулю, оцените его сложность.
+
+\medskip
+
+\textbf{6} Вам дана кучка камней, один из которых радиоактивный. Счетчиком Гейгера можно измерить, есть ли в любой кучке радиоактивный. Предложите алгоритм, позволяющий найти этот камень за асимптотически оптимальное число действий. Докажите, что меньше действий совершить нельзя.
+
+% \medskip
+
+% \textbf{7} 
+
+% \medskip
+
+% \textbf{8} 
+
+% \medskip
+
+% \textbf{9} 
+
+% \medskip
+
+% \textbf{10} 
+
+\end{document}

@@ -1,0 +1,129 @@
+\documentclass{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}   
+\usepackage[english, russian]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with`a4paper' for UK/EU standard size
+\usepackage[a4paper,top=2cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+% \usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
+\usepackage{hyperref}
+\usepackage{seqsplit}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{algorithmicx}
+\usepackage{mathalfa}
+\usepackage{mathrsfs}
+\usepackage{dsfont}
+\usepackage{caption,subcaption}
+\usepackage{wrapfig}
+\usepackage[stable]{footmisc}
+\usepackage{indentfirst}
+\usepackage{rotating}
+\usepackage{pdflscape}
+\usepackage{tikz}
+
+\usepackage{MnSymbol,wasysym}
+\usepackage{minted}
+
+\begin{document}
+
+\begin{center}
+\Large {Задание 7. Расширенный алгоритм Евклида. Куча. Разные задачи. Графы}
+\end{center}
+
+\bigskip
+
+\textbf{1} Решите уравнения в целых числах. Нужно найти все решения, а не только частное.
+
+\begin{enumerate}
+    \item $238x + 385y = 133$
+    \item $143x + 121y = 52$
+\end{enumerate}
+
+\medskip
+
+\textbf{2} Решите сравнение $68x + 85 \equiv 0 (\mod 561)$ с помощью расширенного алгоритма Евклида. Требуется найти все решения в вычетах.
+
+\medskip
+
+\textbf{3} Найдите обратный остаток $7^{-1} (\mod 102)$
+
+\medskip
+
+\textbf{4} Приведите алгоритм добавления элемента в уже существующую кучу на максимум из $n$ элементов. Докажите его корректность и оцените асимптотику.
+
+\medskip
+
+\textbf{5} Реализуйте очередь через два стека. Оцените асимптотику операций с получившейся очередью.
+
+\medskip
+
+\textbf{6} Сколько существует различных лесов обхода в глубину для графа-пути?
+
+\medskip
+
+\textbf{7} Турнир - это полный ориентированный граф, то есть такой ориентированный граф, в котором между любой парой различных вершин есть ровно одно ребро. Докажите, что в турнире на $n$ вершинах есть простой (несамопересекающийся) путь длины $n - 1$. Постройте алгоритм, находящий такой путь, и оцените время его работы.
+
+\medskip
+
+\textbf{8} Примените DFS к графу.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.2]
+\tikzstyle{every node}+=[inner sep=0pt]
+\draw [black] (19.4,-16.8) circle (3);
+\draw (19.4,-16.8) node {$a$};
+\draw [black] (39.2,-16.6) circle (3);
+\draw (39.2,-16.6) node {$b$};
+\draw [black] (57.9,-16.6) circle (3);
+\draw (57.9,-16.6) node {$c$};
+\draw [black] (18.9,-36.4) circle (3);
+\draw (18.9,-36.4) node {$d$};
+\draw [black] (39.2,-36.4) circle (3);
+\draw (39.2,-36.4) node {$e$};
+\draw [black] (58.5,-36.4) circle (3);
+\draw (58.5,-36.4) node {$f$};
+\draw [black] (22.4,-16.77) -- (36.2,-16.63);
+\fill [black] (36.2,-16.63) -- (35.4,-16.14) -- (35.41,-17.14);
+\draw [black] (18.9,-19.8) -- (18.9,-33.4);
+\fill [black] (18.9,-33.4) -- (19.4,-32.6) -- (18.4,-32.6);
+\draw [black] (39.2,-19.6) -- (39.2,-33.4);
+\fill [black] (39.2,-33.4) -- (39.7,-32.6) -- (38.7,-32.6);
+\draw [black] (42.2,-16.6) -- (54.9,-16.6);
+\fill [black] (54.9,-16.6) -- (54.1,-16.1) -- (54.1,-17.1);
+\draw [black] (42.2,-36.4) -- (55.5,-36.4);
+\fill [black] (55.5,-36.4) -- (54.7,-35.9) -- (54.7,-36.9);
+\draw [black] (57.99,-19.6) -- (58.41,-33.4);
+\fill [black] (58.41,-33.4) -- (58.88,-32.59) -- (57.89,-32.62);
+\draw [black] (36.2,-36.4) -- (21.9,-36.4);
+\fill [black] (21.9,-36.4) -- (22.7,-36.9) -- (22.7,-35.9);
+\end{tikzpicture}
+\end{center}
+
+Порядок выбора вершин алфавитный.
+
+\medskip
+
+\textbf{9$^*$} На вход задачи подаются натуральные числа $n, a_0, \dots, a_n, y$. Необходимо определить, существует ли такое натуральное число $x$, что $y = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0$.
+
+\medskip
+
+\textbf{10$^*$} Ваш лектор по алгоритмам нашёл два одинаковых шарика из неизвестного материала и внезапно решил измерить их прочность в этажах стоэтажного небоскрёба. Прочность равна номеру минимального этажа, при броске шарика из окна которого шарик
+разобъётся (максимум 100). Считаем, что если шарик уцелел, то его прочность после броска не уменьшилась. Сколько бросков шариков необходимо и достаточно для нахождения прочности?
+
+\end{document}
+
+%На вход поступает ориентированный ациклический граф $G = (V, E)$ и две его вершины $s$ и $t$.
+
+%Построим граф следующим образом. Возьмем граф-путь на $n$ вершинах (ориентированный граф, в котором есть ребро из первой вершины во вторую, из второй в третью и так далее) и добавим к нему еще одну вершину. Добавим ребра из всех вершин исходного графа в добавленную. Сколько существует различных лесов обхода в глубину для такого графа?
+
+Возьмем два графа-кольца (ребра идут из $i$-й вершины в $i+1$-ю и одно из $n$-й в первую) на $n$ вершинах и соединим две произвольные вершины разных колец ребром. Сколько существует различных лесов обхода в глубину в таком графе?

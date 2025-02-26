@@ -1,0 +1,92 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amssymb}
+
+\usepackage[T2A]{fontenc}
+\usepackage[english, russian]{babel}
+
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+
+\usepackage{parskip}
+
+\title{Как техать без регистрации и SMS}
+\author{elijah}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Секция}
+
+Можно писать обычным текстом, можно \textit{курсивом}, можно \textbf{жирным}.
+
+
+
+\section*{Ненумерованная секция}
+
+Подпункты в тексте можно оформлять так:
+
+\subsection{Подсекция}
+
+Чтобы отделить друг от друга две части решения, можно использовать
+
+маленький отступ:
+
+\smallskip
+
+средний отступ:
+
+\medskip
+
+большой отступ:
+
+\bigskip
+
+Кликабельную ссылку в тексте можно дать так:
+\href{https://arxiv.org/pdf/1406.7444.pdf}{эта} статья.
+
+В преамбулу .tex файла нужно включить пакет hyperref, как в начале этого файла.
+
+Нумерованный список можно задать так:
+
+\begin{enumerate}
+    \item первый пункт
+    \item второй пункт
+\end{enumerate}
+
+Ненумерованный так:
+
+\begin{itemize}
+    \item первый пункт
+    \item второй пункт
+\end{itemize}
+
+Оба типа списков поддерживают вложенность, то есть можно написать
+
+\begin{enumerate}
+    \item первый пункт
+    \begin{enumerate}
+        \item первый подпункт
+        \item второй подпункт
+    \end{enumerate}
+
+    \item второй пункт
+\end{enumerate}
+
+Что касается формул, самые важные для нас следующие:
+
+Красивые значки для множеств чисел $\mathbb{R}$, $\mathbb{N}$ (требуют подключения пакета amssymb, как в начале этого файла)
+
+Значок для эпсилон в привычном начертании: $\varepsilon$
+
+Дроби $\frac{A}{B}$
+
+Суммы $\sum\limits_{i=1}^N 2^i$
+
+\end{document}
