@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}   
+\usepackage[english, russian]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with`a4paper' for UK/EU standard size
+\usepackage[a4paper,top=2cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+% \usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
+\usepackage{hyperref}
+\usepackage{seqsplit}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{algorithmicx}
+\usepackage{mathalfa}
+\usepackage{mathrsfs}
+\usepackage{dsfont}
+\usepackage{caption,subcaption}
+\usepackage{wrapfig}
+\usepackage[stable]{footmisc}
+\usepackage{indentfirst}
+\usepackage{rotating}
+\usepackage{pdflscape}
+\usepackage{tikz}
+
+\usepackage{MnSymbol,wasysym}
+\usepackage{minted}
+
+\begin{document}
+
+\begin{center}
+\Large {Задание 14. Разные задачи.}
+\end{center}
+
+\bigskip
+
+\textbf{1[3]} Профессор О. П. Рометчивый придумал новый тип нейронных сетей. На вход поступает вектор $x$ размерности $n_1$. Он умножается слева на матрицу $A_1 \in \mathbb{R}^{n_2 \times n_1}$ ($A_1 x$). Затем результат умножается на матрицу $A_2$, $A_3$ и так далее. Всего профессор использует $m$ матриц, получая вектор размерности $n_{m+1}$, и он написал в своей статье значения $n_1, n_2, \dots, n_{m+1}$. Сколько операций умножения и сложения потребуется сделать, чтобы получить выход такой сети на одном входном векторе? Как оптимизировать вычисление выхода? Какая сложность будет у оптимизированного алгоритма?
+
+\medskip
+
+\textbf{2[2]} На вход задачи подаётся число n и последовательность целых чисел $a_1, \dots, a_n$. Необходимо
+найти такие номера $i$ и $j (1 \leq i < j \leq n)$, что сумма $\sum_{k=i}^{j} a_k$ максимальна.
+Постройте линейный алгоритм, решающий задачу.
+
+
+\end{document}
