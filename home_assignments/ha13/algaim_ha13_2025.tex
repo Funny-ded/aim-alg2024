@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}   
+\usepackage[english, russian]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with`a4paper' for UK/EU standard size
+\usepackage[a4paper,top=2cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+% \usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
+\usepackage{hyperref}
+\usepackage{seqsplit}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{algorithmicx}
+\usepackage{mathalfa}
+\usepackage{mathrsfs}
+\usepackage{dsfont}
+\usepackage{caption,subcaption}
+\usepackage{wrapfig}
+\usepackage[stable]{footmisc}
+\usepackage{indentfirst}
+\usepackage{rotating}
+\usepackage{pdflscape}
+\usepackage{tikz}
+
+\usepackage{MnSymbol,wasysym}
+\usepackage{minted}
+
+\begin{document}
+
+\begin{center}
+\Large {Задание 13. Динамическое программирование.}
+\end{center}
+
+\bigskip
+
+\textbf{1[2 + 3]} Фирма производит программное обеспечение для банкоматов разных стран мира. Банкомату нужно выдавать запрашиваемую клиентом сумму минимальным количеством купюр.
+\begin{enumerate}
+    \item Если у банкомата есть купюры номиналом 1, 2, 5, 10, 20, 50, а сумма — 71, то набор банкнот
+будет 50+20+1. Постройте алгоритм, который будет решать задачу для данного
+набора купюр и произвольной суммы, которая является входом задачи.
+    \item Постройте алгоритм, который решает задачу, когда на вход помимо суммы подаются
+и номиналы банкнот. Является ли он полиномиальным?
+\end{enumerate}
+
+\medskip
+
+\textbf{2[2]} Постройте алгоритм, определяющий, содержит ли данный неориентированный граф (простой) цикл длины 4. Решите в двух случаях, когда имеется в виду реберная длина и вес пути.
+
+\medskip
+
+\textbf{3[2]} Как модифицировать алгоритм Флойда-Уоршелла, чтобы он находил не только длины кратчайших путей между всеми парами вершин, но и сами пути?
+
+\medskip
+
+\textbf{4[2 + 3]} Назовём последовательность $x_1, x_2, \dots, , x_n$ строго унимодальной, если существует такой индекс $k$, что $x_1 < x_2 < \dots < x_k > x_{k+1} > \dots > x_n$. Постройте алгоритм, который получает на вход конечную последовательность натуральных чисел и находит её самую длинную строго унимодальную подпоследовательность.
+
+\end{document}
